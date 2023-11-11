@@ -1,3 +1,0 @@
-googlemaps
-flask
-requests
