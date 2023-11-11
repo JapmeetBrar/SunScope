@@ -19,6 +19,7 @@ if __name__ == "__main__":
 
     API_KEY = 'AIzaSyBZMtnp5vEd8vRtZb-XTkk_vfBYA4YeuVc'
     client = MapInfo(googlemaps.Client(API_KEY))
-    result = client.cordinates("11335 Saskatchewan Dr NW, Edmonton, AB T6G 2M9")
+    result = client.cordinates("West Edmonton Mall")
     print(result)
     
+
