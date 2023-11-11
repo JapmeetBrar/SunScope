@@ -1,23 +1,30 @@
-from flask import Flask, request, render_template
-import requests
-import json
+from flask import Flask, jsonify, request
+from solar_api import get_solar_data  # Importing the get_solar_data function
 
 app = Flask(__name__)
 
-@app.route('/', methods=['GET', 'POST'])
-def index():
-    if request.method == 'POST':
-        latitude = request.form['latitude']
-        longitude = request.form['longitude']
-        api_key = "AIzaSyBZMtnp5vEd8vRtZb-XTkk_vfBYA4YeuVc"
-        result = get_solar_insight(latitude, longitude, api_key)
-        return render_template('results.html', result=result)
-    return render_template('index.html')
+API_KEY = 'AIzaSyBZMtnp5vEd8vRtZb-XTkk_vfBYA4YeuVc'  # Replace with your actual Google API key
 
-def get_solar_insight(latitude, longitude, api_key):
-    url = f"https://solar.googleapis.com/v1/buildingInsights:findClosest?location.latitude={latitude}&location.longitude={longitude}&requiredQuality=HIGH&key={api_key}"
-    response = requests.get(url)
-    return response.json() if response.status_code == 200 else None
+@app.route('/get_solar_data')
+def solar_data_route():
+    # Retrieving latitude and longitude from the request's query parameters
+    latitude = request.args.get('latitude')
+    longitude = request.args.get('longitude')
+
+    # Validate if both latitude and longitude are provided
+    if not latitude or not longitude:
+        return jsonify({'error': 'Latitude and longitude are required'}), 400
+
+    # Call the get_solar_data function and store the result
+    result = get_solar_data(latitude, longitude, API_KEY)
+
+    # Check if there was an error in the API call
+    if 'error' in result:
+        # Return the error message and status code
+        return jsonify(result), result.get('status_code', 500)
+
+    # Return the successful result
+    return jsonify(result)
 
 if __name__ == '__main__':
     app.run(debug=True)

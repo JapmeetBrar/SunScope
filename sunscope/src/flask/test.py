@@ -20,4 +20,3 @@ longitude = -122.1390  # Replace with your desired longitude
 file_path = 'sunscope\src\data\solar_insight.json'  # Specify the path where you want to save the file
 
 result = get_solar_insight_and_save(latitude, longitude, api_key, file_path)
-print(result)
