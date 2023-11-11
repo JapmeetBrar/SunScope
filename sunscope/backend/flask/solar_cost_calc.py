@@ -25,7 +25,7 @@ def calculate_solar_potential(data):
     installation_area = estimate_installation_area(bounding_box)
 
     # Assuming average panel efficiency and solar irradiance
-    avg_panel_efficiency = 0.2366  # 18% is a typical efficiency for solar panels
+    avg_panel_efficiency = 0.2366  # Average from (https://www.greenmatch.co.uk/blog/2014/11/how-efficient-are-solar-panels)
     local_solar_irradiance = 1400  # kWh/kW/year - placeholder value
     estimated_capacity = installation_area * avg_panel_efficiency  # in kW
 
