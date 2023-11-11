@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 
 enum navItemType {
     Home = 'Home',
@@ -18,6 +19,7 @@ const navItemsArray = [navItemType.Home, navItemType.About, navItemType.Contact,
             <div className='grow'>
                 <ul className='flex gap-3 font-bold justify-around text-xl'>
                     {navItemsArray.map((item) => {
+                        <Link to={'/' + item}></Link>
                         return <button className={ item === selected ? 'underline decoration-slate-800 underline-offset-8 text-orange-500': 'hover:text-orange-500'} onClick={() => setSelected(item)}>{item}</button>
                     })}
                 </ul>
