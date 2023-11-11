@@ -1,0 +1,426 @@
+[
+    {
+        "panelsCount": 4,
+        "yearlyEnergyDcKwh": 1639.5813
+    },
+    {
+        "panelsCount": 5,
+        "yearlyEnergyDcKwh": 2050.7136
+    },
+    {
+        "panelsCount": 6,
+        "yearlyEnergyDcKwh": 2461.706
+    },
+    {
+        "panelsCount": 7,
+        "yearlyEnergyDcKwh": 2873.2668
+    },
+    {
+        "panelsCount": 8,
+        "yearlyEnergyDcKwh": 3282.1458
+    },
+    {
+        "panelsCount": 9,
+        "yearlyEnergyDcKwh": 3686.3132
+    },
+    {
+        "panelsCount": 10,
+        "yearlyEnergyDcKwh": 4090.125
+    },
+    {
+        "panelsCount": 11,
+        "yearlyEnergyDcKwh": 4493.7217
+    },
+    {
+        "panelsCount": 12,
+        "yearlyEnergyDcKwh": 4897.0054
+    },
+    {
+        "panelsCount": 13,
+        "yearlyEnergyDcKwh": 5298.809
+    },
+    {
+        "panelsCount": 14,
+        "yearlyEnergyDcKwh": 5703.539
+    },
+    {
+        "panelsCount": 15,
+        "yearlyEnergyDcKwh": 6104.308
+    },
+    {
+        "panelsCount": 16,
+        "yearlyEnergyDcKwh": 6501.7373
+    },
+    {
+        "panelsCount": 17,
+        "yearlyEnergyDcKwh": 6896.5444
+    },
+    {
+        "panelsCount": 18,
+        "yearlyEnergyDcKwh": 7227.9297
+    },
+    {
+        "panelsCount": 19,
+        "yearlyEnergyDcKwh": 7558.872
+    },
+    {
+        "panelsCount": 20,
+        "yearlyEnergyDcKwh": 7889.14
+    },
+    {
+        "panelsCount": 21,
+        "yearlyEnergyDcKwh": 8218.4795
+    },
+    {
+        "panelsCount": 22,
+        "yearlyEnergyDcKwh": 8547.322
+    },
+    {
+        "panelsCount": 23,
+        "yearlyEnergyDcKwh": 8874.436
+    },
+    {
+        "panelsCount": 24,
+        "yearlyEnergyDcKwh": 9200.243
+    },
+    {
+        "panelsCount": 25,
+        "yearlyEnergyDcKwh": 9525.804
+    },
+    {
+        "panelsCount": 26,
+        "yearlyEnergyDcKwh": 9850.623
+    },
+    {
+        "panelsCount": 27,
+        "yearlyEnergyDcKwh": 10179.562
+    },
+    {
+        "panelsCount": 28,
+        "yearlyEnergyDcKwh": 10503.811
+    },
+    {
+        "panelsCount": 29,
+        "yearlyEnergyDcKwh": 10827.078
+    },
+    {
+        "panelsCount": 30,
+        "yearlyEnergyDcKwh": 11146.414
+    },
+    {
+        "panelsCount": 31,
+        "yearlyEnergyDcKwh": 11465.513
+    },
+    {
+        "panelsCount": 32,
+        "yearlyEnergyDcKwh": 11782.837
+    },
+    {
+        "panelsCount": 33,
+        "yearlyEnergyDcKwh": 12099.9
+    },
+    {
+        "panelsCount": 34,
+        "yearlyEnergyDcKwh": 12416.683
+    },
+    {
+        "panelsCount": 35,
+        "yearlyEnergyDcKwh": 12731.451
+    },
+    {
+        "panelsCount": 36,
+        "yearlyEnergyDcKwh": 13045.232
+    },
+    {
+        "panelsCount": 37,
+        "yearlyEnergyDcKwh": 13358.813
+    },
+    {
+        "panelsCount": 38,
+        "yearlyEnergyDcKwh": 13672.132
+    },
+    {
+        "panelsCount": 39,
+        "yearlyEnergyDcKwh": 13985.197
+    },
+    {
+        "panelsCount": 40,
+        "yearlyEnergyDcKwh": 14297.294
+    },
+    {
+        "panelsCount": 41,
+        "yearlyEnergyDcKwh": 14610.643
+    },
+    {
+        "panelsCount": 42,
+        "yearlyEnergyDcKwh": 14922.665
+    },
+    {
+        "panelsCount": 43,
+        "yearlyEnergyDcKwh": 15234.106
+    },
+    {
+        "panelsCount": 44,
+        "yearlyEnergyDcKwh": 15545.006
+    },
+    {
+        "panelsCount": 45,
+        "yearlyEnergyDcKwh": 15860.111
+    },
+    {
+        "panelsCount": 46,
+        "yearlyEnergyDcKwh": 16169.634
+    },
+    {
+        "panelsCount": 47,
+        "yearlyEnergyDcKwh": 16478.36
+    },
+    {
+        "panelsCount": 48,
+        "yearlyEnergyDcKwh": 16785.574
+    },
+    {
+        "panelsCount": 49,
+        "yearlyEnergyDcKwh": 17087.785
+    },
+    {
+        "panelsCount": 50,
+        "yearlyEnergyDcKwh": 17382.969
+    },
+    {
+        "panelsCount": 51,
+        "yearlyEnergyDcKwh": 17682.195
+    },
+    {
+        "panelsCount": 52,
+        "yearlyEnergyDcKwh": 17984.186
+    },
+    {
+        "panelsCount": 53,
+        "yearlyEnergyDcKwh": 18285.87
+    },
+    {
+        "panelsCount": 54,
+        "yearlyEnergyDcKwh": 18579.58
+    },
+    {
+        "panelsCount": 55,
+        "yearlyEnergyDcKwh": 18872.72
+    },
+    {
+        "panelsCount": 56,
+        "yearlyEnergyDcKwh": 19170.547
+    },
+    {
+        "panelsCount": 57,
+        "yearlyEnergyDcKwh": 19461.805
+    },
+    {
+        "panelsCount": 58,
+        "yearlyEnergyDcKwh": 19753.06
+    },
+    {
+        "panelsCount": 59,
+        "yearlyEnergyDcKwh": 20044.145
+    },
+    {
+        "panelsCount": 60,
+        "yearlyEnergyDcKwh": 20333.883
+    },
+    {
+        "panelsCount": 61,
+        "yearlyEnergyDcKwh": 20623.328
+    },
+    {
+        "panelsCount": 62,
+        "yearlyEnergyDcKwh": 20912.35
+    },
+    {
+        "panelsCount": 63,
+        "yearlyEnergyDcKwh": 21200.479
+    },
+    {
+        "panelsCount": 64,
+        "yearlyEnergyDcKwh": 21486.99
+    },
+    {
+        "panelsCount": 65,
+        "yearlyEnergyDcKwh": 21773.037
+    },
+    {
+        "panelsCount": 66,
+        "yearlyEnergyDcKwh": 22059.416
+    },
+    {
+        "panelsCount": 67,
+        "yearlyEnergyDcKwh": 22344.684
+    },
+    {
+        "panelsCount": 68,
+        "yearlyEnergyDcKwh": 22629.102
+    },
+    {
+        "panelsCount": 69,
+        "yearlyEnergyDcKwh": 22912.668
+    },
+    {
+        "panelsCount": 70,
+        "yearlyEnergyDcKwh": 23190.031
+    },
+    {
+        "panelsCount": 71,
+        "yearlyEnergyDcKwh": 23465.98
+    },
+    {
+        "panelsCount": 72,
+        "yearlyEnergyDcKwh": 23740.738
+    },
+    {
+        "panelsCount": 73,
+        "yearlyEnergyDcKwh": 24014.799
+    },
+    {
+        "panelsCount": 74,
+        "yearlyEnergyDcKwh": 24288.773
+    },
+    {
+        "panelsCount": 75,
+        "yearlyEnergyDcKwh": 24561.604
+    },
+    {
+        "panelsCount": 76,
+        "yearlyEnergyDcKwh": 24826.143
+    },
+    {
+        "panelsCount": 77,
+        "yearlyEnergyDcKwh": 25087.375
+    },
+    {
+        "panelsCount": 78,
+        "yearlyEnergyDcKwh": 25347.822
+    },
+    {
+        "panelsCount": 79,
+        "yearlyEnergyDcKwh": 25600.994
+    },
+    {
+        "panelsCount": 80,
+        "yearlyEnergyDcKwh": 25859.89
+    },
+    {
+        "panelsCount": 81,
+        "yearlyEnergyDcKwh": 26111.129
+    },
+    {
+        "panelsCount": 82,
+        "yearlyEnergyDcKwh": 26360.16
+    },
+    {
+        "panelsCount": 83,
+        "yearlyEnergyDcKwh": 26643.041
+    },
+    {
+        "panelsCount": 84,
+        "yearlyEnergyDcKwh": 26887.918
+    },
+    {
+        "panelsCount": 85,
+        "yearlyEnergyDcKwh": 27132.674
+    },
+    {
+        "panelsCount": 86,
+        "yearlyEnergyDcKwh": 27375.033
+    },
+    {
+        "panelsCount": 87,
+        "yearlyEnergyDcKwh": 27614.322
+    },
+    {
+        "panelsCount": 88,
+        "yearlyEnergyDcKwh": 27851.72
+    },
+    {
+        "panelsCount": 89,
+        "yearlyEnergyDcKwh": 28082.842
+    },
+    {
+        "panelsCount": 90,
+        "yearlyEnergyDcKwh": 28308.791
+    },
+    {
+        "panelsCount": 91,
+        "yearlyEnergyDcKwh": 28534.113
+    },
+    {
+        "panelsCount": 92,
+        "yearlyEnergyDcKwh": 28757.611
+    },
+    {
+        "panelsCount": 93,
+        "yearlyEnergyDcKwh": 28978.498
+    },
+    {
+        "panelsCount": 94,
+        "yearlyEnergyDcKwh": 29202.658
+    },
+    {
+        "panelsCount": 95,
+        "yearlyEnergyDcKwh": 29423.262
+    },
+    {
+        "panelsCount": 96,
+        "yearlyEnergyDcKwh": 29649.04
+    },
+    {
+        "panelsCount": 97,
+        "yearlyEnergyDcKwh": 29869.29
+    },
+    {
+        "panelsCount": 98,
+        "yearlyEnergyDcKwh": 30089.12
+    },
+    {
+        "panelsCount": 99,
+        "yearlyEnergyDcKwh": 30307.79
+    },
+    {
+        "panelsCount": 100,
+        "yearlyEnergyDcKwh": 30523.123
+    },
+    {
+        "panelsCount": 101,
+        "yearlyEnergyDcKwh": 30736.72
+    },
+    {
+        "panelsCount": 102,
+        "yearlyEnergyDcKwh": 30950.05
+    },
+    {
+        "panelsCount": 103,
+        "yearlyEnergyDcKwh": 31161.922
+    },
+    {
+        "panelsCount": 104,
+        "yearlyEnergyDcKwh": 31372.846
+    },
+    {
+        "panelsCount": 106,
+        "yearlyEnergyDcKwh": 31794.195
+    },
+    {
+        "panelsCount": 108,
+        "yearlyEnergyDcKwh": 32206.656
+    },
+    {
+        "panelsCount": 110,
+        "yearlyEnergyDcKwh": 32609.852
+    },
+    {
+        "panelsCount": 112,
+        "yearlyEnergyDcKwh": 32985.42
+    },
+    {
+        "panelsCount": 114,
+        "yearlyEnergyDcKwh": 33280.67
+    }
+]

@@ -3,7 +3,7 @@ from solar_api import get_solar_data  # Importing the get_solar_data function
 
 app = Flask(__name__)
 
-API_KEY = 'AIzaSyBZMtnp5vEd8vRtZb-XTkk_vfBYA4YeuVc'  # Replace with your actual Google API key
+API_KEY = 'AIzaSyBZMtnp5vEd8vRtZb-XTkk_vfBYA4YeuVc'
 
 @app.route('/get_solar_data')
 def solar_data_route():
@@ -11,7 +11,7 @@ def solar_data_route():
     latitude = request.args.get('latitude')
     longitude = request.args.get('longitude')
 
-    # Validate if both latitude and longitude are provided
+    
     if not latitude or not longitude:
         return jsonify({'error': 'Latitude and longitude are required'}), 400
 
