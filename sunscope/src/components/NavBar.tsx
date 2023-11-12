@@ -1,10 +1,8 @@
-import React, { useState } from "react";
+import{ useState } from "react";
 import { Link } from "react-router-dom";
 
 enum navItemType {
   Home = "Home",
-  About = "About",
-  Contact = "Contact",
   Estimate = "Estimate",
 }
 
@@ -12,8 +10,6 @@ function NavBar() {
   const [selected, setSelected] = useState(navItemType.Home);
   const navItemsArray = [
     navItemType.Home,
-    navItemType.About,
-    navItemType.Contact,
     navItemType.Estimate,
   ];
 
