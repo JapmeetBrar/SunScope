@@ -3,23 +3,18 @@ import googlemaps
 class MapInfo:
     def __init__(self, client: googlemaps.Client):
         self.client = client
-    def geocode(self, address: str) -> dict():#Gets geocode of an address        
+
+    def geocode(self, address: str) -> dict:
+        # Gets geocode of an address
         return self.client.geocode(address)
-    def cordinates(self, address: str) -> tuple(): #returns list of tuples of longitude and latitude in search results:
-        reuslting_cordinates = []
+
+    def coordinates(self, address: str) -> tuple:
+        # Returns a tuple of longitude and latitude for the first search result
         result = self.geocode(address)
-        for location in result:
-            lat = location['geometry']['location']['lat']
-            long = location['geometry']['location']['lng']
-            reuslting_cordinates.append((lat, long))        
-        return reuslting_cordinates
+        if result:
+            location = result[0]['geometry']['location']
+            return location['lat'], location['lng']
+        else:
+            return None, None
 
 if __name__ == "__main__":
-    
-
-    API_KEY = 'AIzaSyBZMtnp5vEd8vRtZb-XTkk_vfBYA4YeuVc'
-    client = MapInfo(googlemaps.Client(API_KEY))
-    result = client.cordinates("West Edmonton Mall")
-    print(result)
-    
-

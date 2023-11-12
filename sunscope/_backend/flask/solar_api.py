@@ -1,4 +1,7 @@
 import requests
+import json
+import os
+import re
 
 def get_solar_data(latitude, longitude, api_key):
     # Parameters for the API request
@@ -13,6 +16,32 @@ def get_solar_data(latitude, longitude, api_key):
     response = requests.get('https://solar.googleapis.com/v1/buildingInsights:findClosest', params=params)
 
     if response.status_code == 200:
-        return response.json()
+        data = response.json()
+
+        # Directory path
+        dir_path = os.path.join('sunscope_backend', 'data', 'API', 'json')
+        if not os.path.exists(dir_path):
+            os.makedirs(dir_path)
+
+        # Find the next available file number
+        file_number = 1
+        pattern = re.compile(r'solar_data(\d+)\.json')
+        for file in os.listdir(dir_path):
+            match = pattern.match(file)
+            if match:
+                current_number = int(match.group(1))
+                if current_number >= file_number:
+                    file_number = current_number + 1
+
+        # Define the file path with the new number
+        file_path = os.path.join(dir_path, f'solar_data{file_number}.json')
+
+        # Write the JSON data to the file
+        with open(file_path, 'w') as file:
+            json.dump(data, file)
+
+        return data
     else:
         return {'error': 'Failed to fetch data from Google API', 'status_code': response.status_code}
+
+get_solar_data(51.0486, -114.0708, 'AIzaSyBZMtnp5vEd8vRtZb-XTkk_vfBYA4YeuVc') 

@@ -36,7 +36,7 @@ fe = FinancialEngineering(data)
 rate_per_kwh = 0.10  # This can be adjusted as needed
 cost_per_panel = 1000  # Example: $1000 per panel
 
-# Iterating through each configuration and performing calculations
+"""# Iterating through each configuration and performing calculations
 for key, energy_kwh in data.items():
     panels_count = int(key.replace('yearlyEnergyDcKwh', ''))  # Extracting the number of panels
     revenue = fe.calculate_revenue(panels_count, rate_per_kwh)
@@ -47,4 +47,4 @@ for key, energy_kwh in data.items():
     print(f"Yearly Energy Production: {energy_kwh} kWh")
     print(f"Yearly Revenue: ${revenue:.2f}")
     print(f"Payback Period: {payback_period:.2f} years")
-    print("-----------------------------------------")
+    print("-----------------------------------------")"""
