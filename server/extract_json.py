@@ -51,7 +51,7 @@ def export_json(data, dir_path, file_number):
     with open(output_file_path, 'w') as file:
         json.dump(data, file, indent=4)
 
-dir_path = "/Users/yashkumar/Desktop/b/BE/data/JSON"
+dir_path = "server\sunscope\BE\data\json"
 
 latest_file, file_number = find_latest_file(dir_path)
 if latest_file:

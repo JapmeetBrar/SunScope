@@ -2,16 +2,22 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 from mapdata import MapInfo
 import googlemaps
+import yaml
+import os
+import re
 from solar_api import get_solar_data
 from extract_json import process_data_custom_keys
 from financial_engineering import FinancialEngineering
-import os
-import re
+
+with open('server\sunscope\BE\data\json\secret.yml', 'r') as file:
+    config = yaml.safe_load(file)
+
+API_KEY = config['api_key']
+
 
 app = Flask(__name__)
 # THIS WILL HAVE TO BE CHANGED - CAN'T LET ALL SOURCES/ORIGINS ACCESS THE API
 CORS(app, resources={r"/*": {"origins": "http://localhost:5173"}})
-API_KEY = 'AIzaSyBZMtnp5vEd8vRtZb-XTkk_vfBYA4YeuVc'
 client = MapInfo(googlemaps.Client(API_KEY))
 
 @app.route('/get_solar_financial_data', methods=['GET'])
