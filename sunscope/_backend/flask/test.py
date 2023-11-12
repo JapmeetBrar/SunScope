@@ -13,7 +13,7 @@ client = MapInfo(googlemaps.Client(API_KEY))
 
 
 
-address = "2502, 4641 128 Avenue NE Calgary, Alberta T3N1T2"
+address = "3253 16A AV NW Edmonton, Alberta T6T0P6"
 coordinates = client.coordinates(address)
 
 if coordinates:
