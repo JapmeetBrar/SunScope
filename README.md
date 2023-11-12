@@ -21,4 +21,5 @@ Throughout this journey, we've gained deeper insights into **renewable energy ma
 ## What's next for SunScope 🔮
 Moving forward, we plan to incorporate **machine learning algorithms** to predict solar output more accurately and **expand our database** to cover global locations. We're also exploring **partnerships with solar panel providers** to offer users end-to-end solutions.
 
-Test it out at sunscope.netlify.app
+Test it out at [Link text](https://sunscope.netlify.app/)
+
