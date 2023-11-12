@@ -13,7 +13,7 @@ client = MapInfo(googlemaps.Client(API_KEY))
 
 
 
-address = "3253 16A AV NW Edmonton, Alberta T6T0P6"
+address = "2905 37 Ave NE, Calgary, AB T1Y 5Z9"
 coordinates = client.coordinates(address)
 
 if coordinates:
@@ -23,7 +23,7 @@ if coordinates:
     solar_data = get_solar_data(latitude, longitude, API_KEY)
 
     # Directory path where the JSON files are stored
-    dir_path = 'sunscope\_backend\data\JSON'
+    dir_path = 'sunscope\BE\data\JSON'
 
     # Find the latest file for importing
     latest_file, file_number = find_latest_file(dir_path)
