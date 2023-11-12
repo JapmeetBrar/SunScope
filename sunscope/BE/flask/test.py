@@ -13,7 +13,7 @@ client = MapInfo(googlemaps.Client(API_KEY))
 
 
 
-address = "2905 37 Ave NE, Calgary, AB T1Y 5Z9"
+address = "192 CENTENNIAL CO NW Edmonton, Alberta T5P4H5"
 coordinates = client.coordinates(address)
 
 if coordinates:
@@ -36,7 +36,7 @@ if coordinates:
 
         # Processing the data
         processed_data = process_data_custom_keys(data)
-
+        print(processed_data)
         # Exporting the processed data to a new JSON file with corresponding naming
         export_json(processed_data, dir_path, file_number)
 
@@ -61,6 +61,8 @@ if 'processed_data' in locals():
     payback_period = fe.calculate_payback_period(number_of_panels, rate_per_kwh, cost_per_panel * number_of_panels)
 
     # Output the results
+    print(f"maxSunshineHoursPerYear: {processed_data['maxSunshineHoursPerYear']}")
+    print(f"maxArrayAreaMeters2: {processed_data['maxArrayAreaMeters2']}")
     print(f"Revenue for {number_of_panels} panels: ${revenue}")
     print(f"Payback Period: {payback_period} years")
 else:

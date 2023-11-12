@@ -24,9 +24,29 @@ def import_json(file_path):
 
 def process_data_custom_keys(data):
     processed_data = {}
+
+    # Process 'solarPanelConfigs'
     for entry in data['solarPotential']['solarPanelConfigs']:
         key = f"yearlyEnergyDcKwh{entry['panelsCount']}"
         processed_data[key] = entry['yearlyEnergyDcKwh']
+
+    # Recursive function to search for keys in nested dictionaries
+    def find_keys(nested_dictionary, target_keys):
+        found_values = {key: None for key in target_keys}
+        for key, value in nested_dictionary.items():
+            if key in target_keys:
+                found_values[key] = value
+            if isinstance(value, dict):
+                deeper_values = find_keys(value, target_keys)
+                for k in deeper_values:
+                    if deeper_values[k] is not None:
+                        found_values[k] = deeper_values[k]
+        return found_values
+
+    # Extract 'maxArrayAreaMeters2' and 'maxSunshineHoursPerYear'
+    nested_keys = find_keys(data, ['maxArrayAreaMeters2', 'maxSunshineHoursPerYear'])
+    processed_data.update(nested_keys)
+
     return processed_data
 
 def export_json(data, dir_path, file_number):

@@ -366,6 +366,6 @@
     "yearlyEnergyDcKwh2075": 705836.5,
     "yearlyEnergyDcKwh2096": 711594.6,
     "yearlyEnergyDcKwh2101": 712792.9,
-    "maxArrayAreaMeters2": null,
-    "maxSunshineHoursPerYear": null
+    "maxArrayAreaMeters2": 3438.9167,
+    "maxSunshineHoursPerYear": 1403.7643
 }
