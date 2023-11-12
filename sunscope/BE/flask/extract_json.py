@@ -35,7 +35,7 @@ def export_json(data, dir_path, file_number):
         json.dump(data, file, indent=4)
 
 # Directory path
-dir_path = 'sunscope/_backend/data/json'
+dir_path = 'sunscope\BE\data\JSON'
 
 # Find the latest file for importing
 latest_file, file_number = find_latest_file(dir_path)
