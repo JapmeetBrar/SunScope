@@ -16,5 +16,3 @@ class MapInfo:
             return location['lat'], location['lng']
         else:
             return None, None
-
-if __name__ == "__main__":

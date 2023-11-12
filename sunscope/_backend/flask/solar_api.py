@@ -19,7 +19,7 @@ def get_solar_data(latitude, longitude, api_key):
         data = response.json()
 
         # Directory path
-        dir_path = os.path.join('sunscope','_backend', 'data', 'API', 'json')
+        dir_path = os.path.join('sunscope','_backend', 'data', 'json')
         if not os.path.exists(dir_path):
             os.makedirs(dir_path)
 
