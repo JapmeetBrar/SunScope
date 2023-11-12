@@ -5,14 +5,12 @@ const Home = () => {
 <div style={{ backgroundColor: 'rgb(225 245 254 / var(1)', paddingTop: '50px', marginBottom: '2.5%' }}> 
         <header className="bg-gradient-to-r from-cyan-500 to-blue-500 h-[26rem] flex items-center justify-between rounded-xl" style={{ width: '80%', margin: 'auto', borderRadius: '20px' }}>
 
-          <div className="flex items-center" style={{ backgroundColor: 'white', borderRadius: '20px', padding: '10px 20px', marginLeft: '100px' }}> {/* Increased marginLeft here */}
+          <div className="flex items-center" style={{ backgroundColor: 'white', borderRadius: '20px', padding: '10px 20px', marginLeft: '100px' }}>
             <div>
               <h1 className="text-6xl font-extrabold mb-4" style={{ color: '#333' }}>SunScope</h1>
               <p className="text-2xl" style={{ color: '#555' }}>Empowering your solar potential</p>
             </div>
           </div>
-          
-          {/* Image */}
           <img src={"/house_image.png"} alt="House showcasing solar panels" style={{ height: '120%', maxWidth: '100%', marginTop: '-10%', marginBottom: '-10%' }} />
         </header>
       </div>
