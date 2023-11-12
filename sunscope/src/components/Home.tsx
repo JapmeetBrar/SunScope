@@ -47,6 +47,17 @@ const Home = () => {
         </header>
       </div>
 
+      <section className="p-10">
+        <div className="bg-white p-8 rounded-2xl shadow-md">
+          <h2 className="text-4xl font-bold mb-4 text-gray-800">
+            Our Mission
+          </h2>
+          <p className="text-gray-600">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit, debitis.
+          </p>
+        </div>
+      </section>
+
       <div className="grid md:grid-cols-2 gap-10 p-10">
         <section className="bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition duration-500">
           <h2 className="text-4xl font-bold mb-4 text-gray-800">
