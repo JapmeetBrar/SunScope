@@ -15,16 +15,16 @@ const EstimatePage = () => {
     setIsAnalyzing(true);
     try {
       // NEED TO CHANGE THE URL
-      const response = await axios.get(`http://127.0.0.1:5000/get_solar_financial_data`, { params: { address } });
+      const response = await axios.get('https://sunscope-latest-gtpsnz34ja-uc.a.run.app/get_solar_financial_data', { params: { address } });
       console.log('API Response:', response.data);
       const { maxSunshineHoursPerYear, maxArrayAreaMeters2} = response.data.processed_data;
       const financial_analysis = response.data.financial_analysis
 
       setResults({
-        sunlightHours: maxSunshineHoursPerYear,
-        availableArea: maxArrayAreaMeters2,
-        revenue: financial_analysis.revenue,
-        paybackPeriod: financial_analysis.payback_period
+        sunlightHours: parseInt(maxSunshineHoursPerYear).toFixed(),
+        availableArea: parseInt(maxArrayAreaMeters2).toFixed(),
+        revenue: parseFloat(financial_analysis.revenue).toFixed(2),
+        paybackPeriod: parseFloat(financial_analysis.payback_period).toFixed(2)
       });
     } catch (error) {
       console.error('Error during analysis:', error);
@@ -33,23 +33,28 @@ const EstimatePage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white font-sans text-gray-800">
+    <div className="min-h-screen bg-gradient-to-r from-cyan-500 to-blue-500 font-sans text-gray-800">
       <div className="container mx-auto py-12 px-6 md:px-0">
-        <h1 className="text-5xl font-bold mb-12 text-center">Solar Potential Estimate</h1>
-
+  
         <div className="bg-gray-100 p-8 rounded-xl shadow-md">
-          <div className="mb-8">
-            <label htmlFor="address" className="block text-xl font-semibold mb-3">
+        <h1 className="text-5xl font-bold mb-2 text-center">Estimate Your Solar Potential 🌞🔍</h1>
+
+        <p className='text-lg'>Gain a clear understanding of what solar power could mean for your home with SunScope's precise estimate page. Simply enter your address and let our advanced algorithms provide you with an accurate solar potential estimate, including expected energy output and financial benefits.</p>
+          <div className="">
+            <label htmlFor="address" className="block text-2xl font-semibold mb-3">
               Your Address
             </label>
-            <input
-              type="text"
-              className="form-input w-full p-4 rounded-xl bg-gray-50 border border-gray-300 focus:border-blue-300 focus:ring-1 focus:ring-blue-300 transition duration-200 ease-in-out"
-              id="address"
-              placeholder="Enter your address"
-              value={address}
-              onChange={(e) => setAddress(e.target.value)}
-            />
+            <div className='flex flex-col justify-center items-center'>
+              <input
+                type="text"
+                className="form-input w-1/2 p-4 rounded-xl bg-gray-50 border border-gray-300 focus:border-blue-300 focus:ring-1 focus:ring-blue-300 transition duration-200 ease-in-out"
+                id="address"
+                placeholder="Enter your address"
+                value={address}
+                onChange={(e) => setAddress(e.target.value)}
+              />
+              <img src="./src/assets/roof.png" alt="" className='rotate-90 text-center -my-20'/>
+            </div>
           </div>
 
           <div className="text-center">
@@ -62,14 +67,18 @@ const EstimatePage = () => {
               {isAnalyzing ? 'Analyzing...' : 'Analyze'}
             </button>
           </div>
-        </div>
+        
 
-        <div className="mt-12 bg-gray-100 p-8 rounded-xl shadow-md">
-          <h2 className="text-2xl font-semibold">Results:</h2>
-          <p className="text-xl mt-4">{results.sunlightHours} hours of usable sunlight per year</p>
-          <p className="text-xl">{results.availableArea} sqft available for solar panels</p>
-          <p className="text-xl">Estimated Revenue: ${results.revenue}</p>
-          <p className="text-xl">Payback Period: {results.paybackPeriod} years</p>
+        <div className='flex justify-center content-center '>
+          <div className="mt-12 bg-gray-100 p-8 rounded-xl text-left">
+            <h2 className="text-2xl font-semibold ">Annual Solar Output</h2>
+            <p className="text-xl mt-4">Usable Sunlight per Year: <b>{results.sunlightHours} Hours</b></p>
+            <p className="text-xl">Space Available for Panels: <b>{results.availableArea} ft<sup>2</sup></b></p>
+            <p className="text-xl">Estimated Revenue: <b>${results.revenue}</b></p>
+            <p className="text-xl">Payback Period: <b>{results.paybackPeriod} Years</b></p>
+          </div>
+          <img src="./src/assets/graph.png" alt="" className='w-1/2 mt-10' />
+        </div>
         </div>
       </div>
     </div>

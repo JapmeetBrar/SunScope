@@ -8,8 +8,8 @@ import {
 
 export function Contact() {
   return (
-    <div className="flex bg-light-blue-50 min-h-screen justify-center py-20">
-      <Card color="transparent" shadow={false} className="items-center">
+    <div className="flex bg-gradient-to-r from-cyan-500 to-blue-500 min-h-screen justify-center py-10">
+      <Card color="white" shadow={false} className="items-center p-10 h-1/2">
         <Typography variant="h4" color="blue-gray">
           Contact Us!
         </Typography>
