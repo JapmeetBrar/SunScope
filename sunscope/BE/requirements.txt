@@ -1,5 +1,0 @@
-googlemaps==4.10.0
-matplotlib==3.8.0
-Pillow==10.1.0
-Pillow==10.1.0
-Requests==2.31.0
