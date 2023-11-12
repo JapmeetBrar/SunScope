@@ -3,7 +3,7 @@ const Home = () => {
     <div className="min-h-screen bg-light-blue-50 font-modern-sans">
       <div
         style={{
-          backgroundColor: "rgb(225 245 254 / var(1)",
+          backgroundColor: "rgb(225 245 254) / var(1)",
           paddingTop: "50px",
           marginBottom: "2.5%",
         }}
