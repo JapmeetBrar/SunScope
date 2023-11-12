@@ -9,7 +9,7 @@ import os
 import re
 
 app = Flask(__name__)
-API_KEY = 'Your_Google_Maps_API_Key'
+API_KEY = 'AIzaSyBZMtnp5vEd8vRtZb-XTkk_vfBYA4YeuVc'
 client = MapInfo(googlemaps.Client(API_KEY))
 
 @app.route('/coordinates', methods=['GET'])
