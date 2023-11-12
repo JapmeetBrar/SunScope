@@ -67,13 +67,12 @@ const EstimatePage = () => {
               {isAnalyzing ? 'Analyzing...' : 'Analyze'}
             </button>
           </div>
-        
 
         <div className='flex justify-center content-center '>
           <div className="mt-12 bg-gray-100 p-8 rounded-xl text-left">
             <h2 className="text-2xl font-semibold ">Annual Solar Output</h2>
             <p className="text-xl mt-4">Usable Sunlight per Year: <b>{results.sunlightHours} Hours</b></p>
-            <p className="text-xl">Space Available for Panels: <b>{results.availableArea} ft<sup>2</sup></b></p>
+            <p className="text-xl">Space Available for Panels: <b>{results.availableArea} m<sup>2</sup></b></p>
             <p className="text-xl">Estimated Revenue: <b>${results.revenue}</b></p>
             <p className="text-xl">Payback Period: <b>{results.paybackPeriod} Years</b></p>
           </div>
