@@ -19,7 +19,7 @@ def get_solar_data(latitude, longitude, api_key):
         data = response.json()
 
         # Directory path
-        dir_path = os.path.join('sunscope_backend', 'data', 'API', 'json')
+        dir_path = os.path.join('sunscope','_backend', 'data', 'API', 'json')
         if not os.path.exists(dir_path):
             os.makedirs(dir_path)
 
@@ -44,4 +44,3 @@ def get_solar_data(latitude, longitude, api_key):
     else:
         return {'error': 'Failed to fetch data from Google API', 'status_code': response.status_code}
 
-get_solar_data(51.0486, -114.0708, 'AIzaSyBZMtnp5vEd8vRtZb-XTkk_vfBYA4YeuVc') 
