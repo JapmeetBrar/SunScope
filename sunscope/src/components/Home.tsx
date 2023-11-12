@@ -9,16 +9,16 @@ const Home = () => {
         }}
       >
         <header
-          className="bg-gradient-to-r from-cyan-500 to-blue-500 h-[26rem] flex items-center justify-between rounded-xl"
-          style={{ width: "80%", margin: "auto", borderRadius: "20px" }}
+          className="bg-gradient-to-r from-cyan-500 to-blue-500 h-[28rem] flex items-center justify-between rounded-xl"
+          style={{ width: "86%", margin: "auto", borderRadius: "20px" }}
         >
           <div
             className="flex items-center"
             style={{
               backgroundColor: "white",
               borderRadius: "20px",
-              padding: "10px 20px",
-              marginLeft: "100px",
+              padding: "36px 60px",
+              marginLeft: "75px",
             }}
           >
             <div>
@@ -29,7 +29,7 @@ const Home = () => {
                 SunScope
               </h1>
               <p className="text-2xl" style={{ color: "#555" }}>
-                Empowering your solar potential
+                  Illuminate Your Home with Solar Brilliance
               </p>
             </div>
           </div>
@@ -41,6 +41,7 @@ const Home = () => {
               maxWidth: "100%",
               marginTop: "-10%",
               marginBottom: "-10%",
+              marginRight: "0px",
             }}
           />
         </header>
