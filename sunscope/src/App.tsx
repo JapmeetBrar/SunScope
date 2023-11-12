@@ -1,11 +1,19 @@
 import './App.css'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+import Estimate from "./components/Estimate"
+import Home from "./components/Home"
+import NavBar from './components/NavBar';
 
 function App() {
-
   return (
-    <>
-      <h1 className='text-3xl font-bold underline'>SunScope</h1>
-    </>
+    <Router>
+      <NavBar></NavBar>
+      <Routes>
+        {<Route path="/home" element={<Home />} />}
+        <Route path="/estimate" element={<Estimate />} />
+      </Routes>
+    </Router>
   )
 }
 
