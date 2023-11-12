@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template_string, redirect, url_for
 from mapdata import MapInfo
 import googlemaps
 from solar_api import get_solar_data
@@ -12,12 +12,26 @@ app = Flask(__name__)
 API_KEY = 'AIzaSyBZMtnp5vEd8vRtZb-XTkk_vfBYA4YeuVc'
 client = MapInfo(googlemaps.Client(API_KEY))
 
+@app.route("/", methods=["GET", "POST"])
+def index():
+    """
+    Root route to display an HTML form for address input.
+    On form submission, it redirects to the get_coordinates function.
+    """
+    if request.method == "POST":
+        address = request.form.get("address")
+        return redirect(url_for("get_coordinates", address=address))
+    return '''
+        <form method="post">
+            Address: <input type="text" name="address"><br>
+            <input type="submit" value="Submit">
+        </form>
+    '''
+
 @app.route('/coordinates', methods=['GET'])
 def get_coordinates():
     """
-    Endpoint to get geographical coordinates for a given address.
-    Expects 'address' parameter in the request.
-    Returns JSON with coordinates if address is provided, else a 400 error.
+    Get geographical coordinates for a given address.
     """
     address = request.args.get('address')
     if address:
@@ -29,56 +43,37 @@ def get_coordinates():
 @app.route('/solar_data', methods=['GET'])
 def solar_data():
     """
-    Endpoint to fetch solar data.
-    Modify to include necessary parameters and logic based on your solar data API.
-    Returns JSON with solar data.
+    Endpoint to fetch solar data based on provided coordinates.
+    Expects 'latitude' and 'longitude' as query parameters.
     """
-    data = get_solar_data()
-    return jsonify(data)
+    latitude = request.args.get('latitude')
+    longitude = request.args.get('longitude')
+    if latitude and longitude:
+        data = get_solar_data(latitude, longitude)  # Modify as per your implementation
+        return jsonify(data)
+    else:
+        return "Latitude and longitude required", 400
 
-@app.route('/import_json', methods=['POST'])
-def import_json_file():
+@app.route('/process_json', methods=['POST'])
+def process_json_data():
     """
-    Endpoint to import a JSON file.
-    Expects a file in the request.
-    Process the file using 'import_json' function and return its content.
-    """
-    file = request.files['file']
-    data = import_json(file)
-    return jsonify(data)
-
-@app.route('/find_latest_file', methods=['GET'])
-def latest_file():
-    """
-    Endpoint to find the latest JSON file processed.
-    Uses 'find_latest_file' to retrieve the file name.
-    Returns the name of the latest file.
-    """
-    latest_file = find_latest_file()
-    return jsonify({"latest_file": latest_file})
-
-@app.route('/process_data', methods=['POST'])
-def process_data():
-    """
-    Endpoint to process data with custom keys.
-    Expects JSON data in the POST request.
-    Use 'process_data_custom_keys' for processing and return the processed data.
+    Endpoint to process JSON data. Expects JSON data in the request body.
     """
     data = request.json
     processed_data = process_data_custom_keys(data)
     return jsonify(processed_data)
 
-@app.route('/financial_calculation', methods=['GET'])
-def financial_calculation():
+@app.route('/financial_analysis', methods=['GET'])
+def financial_analysis():
     """
-    Endpoint for financial calculations related to solar investments.
-    Modify to include specific parameters and implement the calculation logic.
-    Returns the result of financial calculations.
+    Endpoint for performing financial analysis. 
+    Expects relevant parameters as query inputs.
     """
-    result = FinancialEngineering().calculate()  # Modify this based on actual implementation
-    return jsonify(result)
+    # Extract parameters from the request and perform financial analysis
+    # Example: revenue = calculate_revenue(params)
+    # return jsonify({"revenue": revenue, ...})
 
-# Add additional endpoints here as required for other functionalities in test.py
+# Additional endpoints as required ...
 
 if __name__ == '__main__':
     app.run(debug=True)

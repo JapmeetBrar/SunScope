@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 from matplotlib.figure import Figure
 import PIL
 from io import BytesIO
+
 class FinancialEngineering:
     def __init__(self, energy_data):
         self.energy_data = energy_data
